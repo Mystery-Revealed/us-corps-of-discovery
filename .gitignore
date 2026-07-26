@@ -1,0 +1,8 @@
+node_modules/
+client/dist/
+*.log
+.DS_Store
+
+# local-only
+.claude/settings.local.json
+corps-of-discovery_*.pdf

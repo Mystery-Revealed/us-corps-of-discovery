@@ -1,0 +1,18 @@
+{
+  "name": "us-corps-of-discovery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Corps of Discovery: Mission West — Unit 4 U.S. History expedition survival game (TEKS 8.5C, 8.6B, 8.10A, 8.11A, 8.31B). Co-command the real 1804-1806 Lewis & Clark expedition across six legs and twelve decisions, where the right call is almost always the one the Corps actually made: prepare, hold discipline, and trust the Native nations whose land it already was. Server-authoritative Socket.IO backend with a live Teacher Command Center.",
+  "comment": "No npm workspaces: this drive is exFAT, which cannot host the symlinks/junctions workspace linking requires. server/ and client/ install independently; `npm install` here cascades via postinstall.",
+  "scripts": {
+    "postinstall": "npm install --prefix server --no-fund --no-audit && npm install --prefix client --no-fund --no-audit",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "test": "npm test --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "node server/src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
